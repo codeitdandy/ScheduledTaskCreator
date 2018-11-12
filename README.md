@@ -22,13 +22,18 @@ Docker runs best with Linux but is equally supported in Windows, Macs. Check Acc
 
 https://docs.docker.com/install/#nightly-builds
 
-ScheduledTaskCreator is thought to be running as an independent service running in together will TaskManager service
-A Docker image in docker hub is already made available.(rajarshi02/taskscheduler)
-docker pull postgres (pull postgresql dependency supported for Version 10 and test whether it can connect to localhost at 5432, for remote hosts this will need to be changed in application.properties in the ScheduledTaskCreator codebase and configuration files in postgres (if required)
-docker pull rajarshi02/taskscheduler
-docker-compose up to run the images and application at exposed ports.
+ScheduledTaskCreator is thought to be running as an independent service running in together will TaskManager service. Docker -compose file will allow managing both the container together.
 
-Alternatively , this project can also be built by using the Dockerfile by running the below command and then running docker-compose 
-docker build -t nameofcontainer .
+A Docker image in docker hub is already made available for both creator and manager services.(rajarshi02/taskscheduler) ,(rajarshi02/taskmanager)
+
+If interested to pull the images via hub , run the following docker pull rajarshi02/taskscheduler , docker pull rajarshi02/taskManager
+
+Else just run docker-compose up , followed by 
+
+docker pull postgres (pull postgresql dependency supported for Version 10 and test whether it can connect to localhost at 5432, for remote hosts this will need to be changed in application.properties in the ScheduledTaskCreator codebase and configuration files in postgres (if required)
+
+Alternatively , this project can also be built locally for doing any changes by using the Dockerfile by running the below command and then running docker-compose 
+
+docker build -t rajarshi02/taskmanager .
 
 
