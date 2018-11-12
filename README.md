@@ -7,11 +7,11 @@ Scheduled Task Creator : Spring Boot 2.0.6 Release Based Project to create Tasks
 # Getting Started
 Download/Clone the Repository into local workspace.
 Maven manages all dependencies, import the project as an Existing Maven Project in your favourite IDE and resolve Maven updates (if required) and build and run the project
-It can be built and run from the command line: using mvn spring-boot:run
+It can be built and run from the command line using mvn spring-boot:run
 It can also be run as a jar file , use maven goals like mvn package to create snapshot uber jars available in target folder
 
 # Prerequisites
-IDE Supporting Maven
+IDE Supporting
 Maven tool installed as a command line option.
 PostgreSQL installed in local machine ( localhost exposing port 5432 user postgresql)
 
